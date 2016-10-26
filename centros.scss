@@ -1,0 +1,157 @@
+@import 'main';
+
+.containerHeader
+{
+	padding-top: 215px;
+	.titulo
+	{
+		font-family: 'MyriadSetPro-Ultralight';
+		font-size: 122px;
+		color: #4A4A4A;
+	}
+	.calle
+	{
+		/* Avenida de la Aurora: */
+		font-family: 'MyriadSetPro-Ultralight';
+		font-size: 37px;
+		color: #4A4A4A;
+		line-height: 46px;
+	}
+	.telefono
+	{
+		/* 951 09 60 08: */
+		font-family: 'MyriadSetPro-Ultralight';
+		font-size: 37px;
+		color: #4A4A4A;
+		line-height: 46px;
+	}
+
+	.redes
+	{
+		position: relative;
+		padding-bottom: 50px;
+		text-align: center;
+		padding-top: 46px;
+		img 
+		{
+			padding-left: 30px;
+			padding-right: 30px;
+
+		}
+	}
+	.botonContacta
+	{
+		background-color: #E6A745;
+		border-radius: 4px;
+		/* Contacta con nosotro: */
+		font-family: 'AvenirNext-Medium';
+		font-size: 22.71px;
+		line-height: 70px;
+		color: #FFFFFF;
+		display: block;
+		width: 350px;
+		height: 70px;
+		text-align: center;
+		text-decoration: none;
+
+		@include align(horizontal);
+	}
+
+	.botonContacta:hover
+	{
+		background-color: #C8913C;
+		text-decoration: none;
+		color: white;
+	}
+}
+
+.mapa
+{
+	margin-top: 70px;
+	width: 100%;
+	.caracteristicas
+	{
+		border-top: 1px solid #dddddd;
+		.item
+		{
+			width: 33%;
+			display: inline-block;
+			text-align: center;
+			line-height: 130px;
+			/* Parking gratuito: */
+			font-family: 'AvenirNext-Medium';
+			font-size: 22.71px;
+			color: #4A4A4A;
+			border-right: 1px solid #dddddd;
+			img 
+			{
+				padding-right: 20px;
+			}
+
+		}
+	}
+	#map
+	{
+		width: 100%;
+		height: 560px;
+	}
+}
+
+@media (max-width: 989px)
+{
+	.containerHeader
+	{
+		padding-left: 10%;
+		padding-right: 10%;
+		margin-bottom: 150px;
+		.titulo, .calle, .telefono
+		{
+			width: 100%;
+			text-align: center; 
+		}
+	}
+}
+
+@media (max-width: 756px)
+{
+	.mapa
+	{
+		margin-top: 70px;
+		width: 100%;
+		.caracteristicas
+		{
+			border-top: 1px solid #dddddd;
+			.item
+			{
+				width: 100%;
+				display: block;
+				border-bottom: 1px solid #dddddd;
+				img 
+				{
+					padding-right: 20px;
+				}
+
+			}
+		}
+		#map
+		{
+			width: 100%;
+			height: 560px;
+		}
+	}
+
+
+	.containerHeader .redes img 
+	{
+		display: block;
+		@include align(horizontal);
+		position: relative;
+		padding-bottom: 30px;
+
+	}
+
+	.containerHeader .titulo
+	{
+		font-size: 90px; 
+	}
+}

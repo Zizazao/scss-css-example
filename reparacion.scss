@@ -1,0 +1,149 @@
+@import 'main';
+
+.containerHeader
+{
+	padding-top: 215px;
+	.imgMovil 
+	{
+		display: inline-block;
+		width: 39%;
+		img 
+		{
+			display: block;
+			width: 100%;
+
+			position: relative;
+		}
+	}
+	.caracteristicasReparacion
+	{
+		padding-left: 10%;
+		width: 50%;
+		display: inline-block;
+		position: absolute;
+	}
+	.caracteristicasReparacion
+	{
+		padding-bottom: 75px;
+		.marca
+
+		{
+			/* APPLE: */		
+			font-family: 'MyriadSetPro-Ultralight';
+			font-size: 25px;
+			color: #4A4A4A;
+			line-height: 46px;
+		}
+
+		.modelo
+		{
+			/* iPhone 6: */
+			font-family: 'MyriadSetPro-Ultralight';
+			font-size: 72px;
+			color: #4A4A4A;
+		}
+		.precio
+		{
+			/* 68€: */
+			font-family: 'MyriadSetPro-Ultralight';
+			font-size: 92px;
+			color: #E6A745;
+		}
+		.seleccionProblema
+		{
+			.problema
+			{
+				/* TFT + TÁCTIL: */
+				font-family: 'AvenirNext-Medium';
+				font-size: 15.72px;
+				line-height: 80px;
+				color: #4A4A4A;
+				display: inline-block;
+				width: 59%;
+				height: 80px;
+				border: 1px solid #dddddd;
+				border-radius: 4px;
+				text-align: center;
+				vertical-align: middle;
+				label 
+				{
+					/* Problema: */
+					font-family: 'AvenirNext-Medium';
+					font-size: 15.72px;
+					color: #4A4A4A;
+				}
+				
+			}
+		}
+		.boton
+		{
+			display: inline-block;
+			/* Reparar en 1h: */
+			font-family: 'AvenirNext-Medium';
+			font-size: 15.72px;
+			line-height: 80px;
+			background-color: #E6A745;
+			color: #FFFFFF;
+			display: inline-block;
+			width: 40%;
+			height: 80px;
+			border: 1px solid #dddddd;
+			border-radius: 4px;
+			text-align: center;
+			vertical-align: middle;
+		}
+		.caracteristicas
+		{
+			padding-top: 75px;
+			.itemCarac
+			{
+				padding-top: 15px;
+				padding-bottom: 15px;
+				img 
+				{
+					padding-right: 20px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1000px)
+{
+	.containerHeader .imgMovil
+	{
+		width: 100%;
+		display: block;
+		text-align: -webkit-center;
+		padding-bottom: 75px; 
+		img 
+		{
+			width:50%;
+		}
+	}
+
+	.containerHeader .caracteristicasReparacion
+	{
+		padding-left: 20px;
+		padding-right: 20px;
+		width: 100%;
+	}
+	.containerHeader .caracteristicasReparacion .caracteristicas .itemCarac
+	{
+		text-align: center;
+	}
+	
+}
+
+@media (max-width: 500px)
+{
+	.containerHeader .caracteristicasReparacion .boton
+	{
+		display: block;
+		width: 100%;
+	}
+	.containerHeader .caracteristicasReparacion .seleccionProblema .problema
+	{
+		width: 100%;
+	}
+}

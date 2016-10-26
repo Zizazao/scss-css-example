@@ -1,0 +1,360 @@
+@import 'main';
+
+
+.bloqueHeader
+{
+	@include fondoImagen;
+	height: 800px;
+	position: absolute;
+	margin-top: 0;
+	    z-index: -3;
+}
+
+.containerHeader
+{
+	padding-top: 125px;
+	.titulo
+	{
+		h1
+		{
+			/* Fácil. Rápido.: */
+			font-family: 'MyriadSetPro-Ultralight';
+			font-size: 122px;
+			color: #4A4A4A;				
+		}	
+
+	}
+	.subtitulo
+	{
+		/* Vuelve a disfrutar d: */
+		font-family: 'MyriadSetPro-Ultralight';
+		font-size: 37px;
+		color: #4A4A4A;
+		line-height: 46px;
+		padding-top: 50px;
+	}
+	.caracteristicas
+	{
+		.itemCarac
+		{
+			display: inline-block;
+			/* Parking gratuito: */
+			font-family: 'AvenirNext-Medium';
+			font-size: 15.72px;
+			color: #4A4A4A;
+			opacity: 0.6;
+			padding-top: 60px;
+			padding-right: 30px;
+			img 
+			{
+				padding-right: 15px;
+			}
+		}
+
+
+	}
+
+	.cajaSeleccion
+	{
+		display: block;
+		height: 150px;
+		width: 545px;
+		border: 1px solid #DDDDDD;
+		border-radius: 4px 4px 0 0;
+		.selectores
+		{
+			height: 80px;
+			display: block;
+			background-color: #ffffff;
+			border-radius: 4px 4px 0px 0px;
+
+			.selector
+			{
+				height: 100%;
+				display: inline-block;
+				margin:0;
+				padding: 0;
+				position: relative;
+				.contenido 
+				{
+					@include align(center);
+					position: relative;
+					width: auto;
+					display: inline-block;
+					img 
+					{
+						margin-top: -5px;
+						padding-right:15px;
+					}
+				}
+				.dropArrow
+				{
+					@include align(vertical);
+					vertical-align: middle;
+					right: 20px;
+
+
+				}
+			}
+
+			.selectMarca
+			{
+				width: 156px;
+				border-right: 1px solid #DDDDDD;
+			}
+
+			.selectModelo
+			{
+				width: 193px;
+				border-right: 1px solid #DDDDDD;
+
+			}
+			.selectProblema
+			{
+				width: 187px;
+			}
+		}
+		.botonAceptar
+		{
+			height: 70px;
+			display: block;
+			width: 100%;
+			background-color: #E6A745;
+			border-radius: 0 0 4px 4px;
+			.aceptar
+			{
+				@include align(center);
+				display: inline-block;
+				color: #ffffff;
+				position: relative;
+			}
+		}
+		.botonAceptar:hover
+		{
+			background-color: #C48E39;
+		}
+
+	}
+}
+
+.bloquePromociones
+{
+	height: 700px;
+	position: relative;
+	padding:0;
+	margin:0;
+	padding-top: 120px;
+	width: 100%;
+	.promocion
+	{
+		@include col(1/2);
+		margin:0;
+		padding:0;
+		width: 50%;
+		height: 350px;
+		position: relative;
+		img 
+		{
+			position: absolute;
+    		bottom: 0;
+    		left: 50px;
+		}
+		.contenido
+		{
+			width: 50%;
+			float: right;
+			height: 100%;
+			.etiquetaPromocion
+			{
+				/* Promoción: */
+				font-family: 'AvenirNext-Medium';
+				font-size: 15.72px;
+				color: #FFFFFF;
+				width: 131px;
+				height: 37px;
+				border-radius: 100px;
+				background-color: #E6A745;
+				position: relative;
+				margin-top: 43px;
+				span
+				{
+					display: inline-block;
+					@include align(center);
+					position: relative;
+				}
+			}
+			.nombreMovil
+			{
+				/* iPhone 6: */
+				font-family: 'MyriadSetPro-Ultralight';
+				font-size: 56px;
+				line-height: 56px;
+				color: #4A4A4A;
+				padding-top: 20px;
+			}
+			.tipoReparacion
+			{
+				/* Reparación pantalla: */
+				font-family: 'MyriadSetPro-Ultralight';
+				font-size: 36px;
+				line-height: 36px;
+				color: #4A4A4A;
+				padding-bottom: 30px;
+				padding-top: 10px;
+
+
+			}
+			.precio
+			{
+				/* 68€: */
+				font-family: 'MyriadSetPro-Ultralight';
+				font-size: 92px;
+				color: #E6A745;
+				line-height: 92px;
+
+			}
+		}
+	}
+}
+
+
+@media (max-width: 1070px)
+{
+	.bloquePromociones
+	{
+		.promocion
+		{
+			.contenido
+			{
+				.tipoReparacion
+				{
+					padding-bottom: 10px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1030px)
+{
+	.bloquePromociones
+	{
+		.promocion
+		{
+			border-bottom: 1px solid #dddddd;
+
+			img 
+			{
+				left:10%;
+			}
+			width: 100%;
+			.contenido
+			{
+				.tipoReparacion
+				{
+					padding-bottom: 10px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 599px)
+{
+	.containerHeader .cajaSeleccion
+	{
+		height: 310px;
+		border:none;
+		width: 80%;
+		@include align(horizontal);
+		position: relative;
+	}
+	.containerHeader .cajaSeleccion .selectores
+	{
+		height:240px;
+		.selector
+		{
+			width: 100%;
+			height: 80px;
+			border: none;
+			border-bottom: 1px solid #dddddd;
+		}
+	}
+	.containerHeader .titulo h1
+	{
+		height: 100%;
+		text-align: center;
+		font-size: 110px;
+		line-height: 110px;
+		margin-top: 12.5px;
+	}
+	.containerHeader .subtitulo
+	{
+		width: 100%;
+		text-align: center;
+		font-size: 26px;
+		line-height: 26px;
+		padding-top: 25px; 
+	}
+
+	.containerHeader .caracteristicas .itemCarac
+	{
+		padding-top: 30px;
+		padding-right: 7px;
+		padding-left: 7px;
+	}
+}
+
+
+@media (max-width: 570px)
+{
+	.containerHeader .subtitulo
+	{
+		br 
+		{
+			display: none;
+		}
+	}
+
+	.bloqueHeader
+	{
+		height: 880px;
+	}
+
+	.bloquePromociones
+	{
+		padding-top: 40px;
+	}
+
+	.containerHeader .caracteristicas .itemCarac
+	{
+		width: 100%;
+		text-align: center;
+	}
+	.bloquePromociones .promocion img
+	{
+		left: 3%;
+	}
+
+	.bloquePromociones .promocion .contenido .nombreMovil
+	{
+		font-size: 46px;
+		line-height: 46px;
+	}
+	.bloquePromociones .promocion .contenido .tipoReparacion
+	{
+		font-size: 26px;
+		line-height: 26px;
+	}
+	.bloquePromociones .promocion .contenido .precio
+	{
+		font-size: 82px;
+		line-height: 65px;
+	}
+
+	.bloquePromociones .promocion .contenido
+	{
+		width: 40%;
+	}
+
+}

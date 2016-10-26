@@ -1,0 +1,79 @@
+@import 'main';
+
+.menu
+{
+	padding:0;
+	margin: 0;
+	padding-top: 40px;
+	position: absolute;
+    z-index: 1;
+    width: 100%;
+
+	.logo
+	{
+		display: inline-block;
+		margin-top: -13px;
+	}
+	.container
+	{
+
+		.menuLista
+		{
+			display: inline-block;
+			.item
+			{
+				display: inline-block;
+				/* CONÓCENOS: */
+				opacity: 0.59;
+				font-family: 'BrandonGrotesque-Regular';
+				font-size: 13px;
+				color: #000000;
+				padding-right: 22px;
+				a, a:hover
+				{
+					color: #000000;
+				}
+				a:hover
+				{
+					font-weight: bold;
+				}
+				a.active
+				{
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: 599px)
+{
+	.menu
+	{
+		width: 100%;
+
+		.logo
+		{
+			@include align(horizontal);
+		}
+		.container
+		{
+			width: 100%;
+			padding:0;
+			.menuLista
+			{
+				padding:0;
+				@include align(horizontal);
+				position: relative;
+				padding-top: 40px;
+
+				.item
+				{
+					padding-right: 11px;
+    				padding-left: 11px;
+				}
+			}
+		}
+	}
+}

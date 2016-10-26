@@ -1,0 +1,64 @@
+@import 'main';
+
+.containerHeader
+{
+	padding-top: 215px;
+	padding-right: 50px;
+	padding-left: 50px;
+}
+
+.titulo
+{
+	/* Ilusión por la perfe: */
+	font-family: 'MyriadSetPro-Ultralight';
+	font-size: 122px;
+	color: #4A4A4A;
+}
+
+.texto
+{
+	/* Lorem ipsum dolor si: */
+	font-family: 'AvenirNext-Regular';
+	font-size: 22.71px;
+	color: #4A4A4A;
+	padding-top: 10px;
+}
+
+
+.bloqueBottom
+{
+	@include fondoImagen;
+	height: 873px;
+	margin-top: 100px;
+}
+
+
+@media (max-width: 720px)
+{
+	.titulo
+	{
+		width: 100%;
+
+		line-height: 50px;
+		font-size: 50px;
+		br 
+		{
+			display: none;
+		}
+	}
+	.containerHeader
+	{
+		padding-left: 20px;
+		padding-right: 20px;
+
+	}
+	.texto
+	{
+		padding-top: 40px;
+		font-size: 19.71px;
+	}
+	.bloqueBottom
+	{
+		margin-top: 40px;
+	}
+}
